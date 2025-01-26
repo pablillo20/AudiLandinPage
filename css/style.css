@@ -1,0 +1,397 @@
+/* mis fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
+
+
+/* Reset y configuración inicial */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 90.5%;
+
+
+
+    /* Colores */
+    --color-principal: #f5f5f5;
+    --color-secundario: #000000;
+    --color-terciario: #e11515;
+    --color-negro: var(--color-secundario);
+    --transparente: #00000055;
+
+    /* Fuentes */
+    --titulo: "Montserrat", serif;
+
+    /* Espaciados */
+    --gap: 2rem;
+    --padding: 2rem;
+
+    /* Otros */
+    --transition: 0.3s ease;
+}
+
+
+/* mis estilos */
+
+body {
+    font-family: var(--titulo);
+}
+
+/* Estilos personalizados para quitar los estilos de Bootstrap navbar */
+.navbar {
+    z-index: 1050;
+    top: 0;
+    position: sticky;
+    background-color: var(--color-principal);
+    height: 8rem;
+}
+
+/* navbar colapse y ocupe el ancho deseado*/
+.navbar-collapse {
+    background-color: var(--color-principal);
+    height: 18rem;
+}
+
+/*Estilos para los videos del navegador*/
+.video {
+    max-height: 14rem;
+    width: 40rem !important;
+    margin-left: 1rem;
+    object-fit: cover;
+}
+
+
+.video2 {
+    max-height: 14rem;
+    width: 40rem !important;
+    margin-right: 1rem;
+    object-fit: cover;
+}
+
+/* Quitar estilos del boton de navegacion de boostrap */
+
+.navbar-toggler {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler i {
+    color: #000;
+    transition: transform 0.2s;
+}
+
+.navbar-toggler:hover i {
+    transform: scale(1.2);
+}
+
+/* Hover y focus del navbar */
+.navbar-brand:hover,
+.navbar-brand:focus {
+    color: var(--color-secundario);
+    background-color: var(--color-terciario);
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Desplegable del navbar */
+.nav-item {
+    background-color: var(--color-principal);
+    align-items: center;
+}
+
+/* Estilos para imagenes  default como el logo */
+.default {
+    height: 6.125rem;
+    width: auto;
+
+}
+
+.default-logo {
+    height: 2.875rem;
+    width: auto;
+    margin-top: 1.5rem;
+}
+
+/*Estilos para el menu desplegable */
+.navbar-nav .nav-link:hover {
+    color: var(--color-terciario);
+}
+
+/*Estilos para el carrusel */
+.carousel {
+    height: 155vh;
+}
+
+/* Estilo de los titulos del carrusel */
+.textoCarrusel {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    color: var(--color-principal);
+    font-size: 5rem;
+    margin-left: 1rem;
+    max-width: 50%;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+/* Texto en cada imagen */
+.carousel-heading {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 2rem;
+    z-index: 1;
+}
+
+
+/* Estilos solo para el segundo carrusel (#carouselExampleRide) */
+#carouselExampleRide {
+    height: 90vh;
+}
+
+/* Tamaño de las imágenes en el carrusel */
+#carouselExampleRide .carousel-item img {
+    max-height: 40rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+/* Título encima del carrusel */
+#carouselExampleRide .carousel-title h2 {
+    font-size: 8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Estilo para los controles del carrusel (flechas) */
+#carouselExampleRide .carousel-control-prev-icon,
+#carouselExampleRide .carousel-control-next-icon {
+    background-color: var(--color-terciario);
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+
+/* Estilo para los botones de paginación (puntos) */
+#carouselExampleRide .carousel-indicators button {
+    background-color: var(--color-terciario);
+    border-radius: 50%;
+    width: 0.7rem;
+    height: 0.7rem;
+}
+
+/* Cambio de color cuando el punto está activo */
+#carouselExampleRide .carousel-indicators .active {
+    background-color: var(--color-secundario);
+}
+
+/* Añadir espaciado en la parte inferior para el carrusel */
+#carouselExampleRide {
+    padding-bottom: 2rem;
+}
+
+/* Galeria de Imagenes */
+img {
+    object-fit: cover;
+    display: block;
+}
+
+/* Imagen grande */
+.border img {
+    width: 100%;
+    height: 51.1rem;
+}
+
+/* Estilo específico para la imagen ancha */
+.border img[alt="Imagen 3"] {
+    width: 100%;
+    height: 20rem;
+}
+
+/* Estilo específico para las imágenes pequeñas */
+.border img[alt="Imagen 1"],
+.border img[alt="Imagen 2"] {
+    width: 100%;
+    height: 30rem;
+}
+
+/* Titulo de la galeria */
+.titulo {
+    font-size: 8rem;
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    color: #333;
+}
+
+/* Servicios adicionales */
+/* Contenedor de las cards */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+    flex-wrap: wrap;
+}
+
+/* Estilo para las cards */
+.card {
+    width: 18rem;
+    text-align: center;
+}
+
+/* Ajustar la altura de las imágenes */
+.card-img-top {
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* Formulario */
+
+/* Estilo exclusivo para la tarjeta con clase form-card */
+.form-card {
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem;
+    background-color: var(--color-principal);
+    padding: 5rem;
+    margin-bottom: 5rem;
+}
+
+
+
+/* Media Query */
+
+/* Vista Tablet */
+@media (max-width: 768px) {
+    :root {
+        font-size: 45.5%;
+    }
+
+    .carousel {
+        height: 90vh !important;
+    }
+
+    #carouselExampleRide {
+        height: 50vh !important;
+    }
+
+}
+
+/* Vista Móvil */
+@media (max-width: 320px) {
+    :root {
+        font-size: 50%;
+        /* Un tamaño más legible */
+    }
+
+    /*Estilos para los videos del navegador*/
+    .video {
+        max-height: 1.5rem;
+        width: 10rem !important;
+        
+    }
+
+
+    .video2 {
+        max-height: 1.5rem;
+        width: 10rem !important;
+       
+    }
+
+    /* Carrusel */
+    .carousel {
+        height: 35vh !important;
+    }
+
+    #carouselExampleRide {
+        height: 30vh !important;
+    }
+
+    /* Reducir el tamaño de las imágenes en el carrusel */
+    #carouselExampleRide .carousel-item img {
+        max-height: 50rem;
+        max-width: 20rem;
+    }
+
+    /* Ajustar los títulos del carrusel */
+    .textoCarrusel {
+        font-size: 2.5rem;
+        top: 5%;
+        left: 5%;
+        max-width: 90%;
+    }
+
+    /* Navbar */
+    .navbar {
+        height: 6rem;
+    }
+
+    .navbar-toggler {
+        margin-right: 1rem;
+    }
+
+    .navbar-collapse {
+        height: auto;
+    }
+
+    /* Video */
+    .video,
+    .video2 {
+        width: 100%;
+        max-height: 6rem;
+        margin: 0;
+    }
+
+    /* Ajustar las imágenes de la galería */
+    .border img {
+        height: auto;
+        max-height: 30rem;
+    }
+
+    /* Cards */
+    .cards-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1rem;
+    }
+
+    .card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card-img-top {
+        height: 10rem;
+    }
+
+    /* Formulario */
+    .form-card {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Títulos */
+    .titulo {
+        font-size: 3.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+}
